@@ -1,0 +1,19 @@
+.box {
+	padding: 10px;
+    &:hover{
+        color:var(--c-text-color);
+    }
+}
+
+.body {
+	margin: 0 20px 0 10px;
+}
+
+.slug{
+    color:var(--c-gray);
+}
+
+.icon{
+    margin-left: auto;
+    font-size: 16px;
+}

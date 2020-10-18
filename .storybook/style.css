@@ -1,10 +1,15 @@
-.icons{
+ /* Burada yazılan stiller tamamen storybook içindeki componentlerin görünümü ile ilgilidir.... !!!
+ iconların stillendirilmesi burada yapmamızın nedeni, storybook da iconları düzgün bir şekilde görüntülemek... */
+
+
+body{
+	padding: 30px;
+}
+
+.icons {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 	grid-gap: 20px;
 	font-size: 40px;
 	padding: 20px;
-	color:var(--c-text-color);
 }
-
-/* iconların stillendirilmesi neden burada yaptık tam olarak emin değilim. ? Araştır sebebini anla!!1 */

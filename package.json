@@ -29,6 +29,7 @@
     "@svgr/cli": "^5.4.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^5.0.0",
+    "postcss-custom-media": "^7.0.8",
     "postcss-loader": "^4.0.4",
     "postcss-nested": "^4.2.3",
     "react-is": "^16.13.1",
