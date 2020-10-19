@@ -1,3 +1,6 @@
 .main{
-    background: #222;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: var(--c-border-color);
+    padding: 0 15px;
 }

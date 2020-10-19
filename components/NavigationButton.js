@@ -4,12 +4,14 @@ import cn from 'classnames';
 import Button from "./Button";
 import styles from "./navigation-button.module.css";
 
-const NavigationButton = ({ notify, children, selected, ...props}) => {
+const NavigationButton = ({ href, notify, children, selected, className, ...props}) => {
 	return (
-		<Button className={cn([styles.navButton, selected && styles.navButtonSelected])} {...props} >
+		<Button className={cn([styles.navButton, selected && styles.navButtonSelected, className])}
+			href={href}
+			{...props} >
 			
+			{notify > 0 && <span className={styles.notify}> {notify} </span> }
 			{children} 
-			{notify && <span className={styles.notify}> {notify} </span> }
 		</Button>
 	);
 };

@@ -1,3 +1,26 @@
 .sidebar{
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    @media (--d){
+        align-items: flex-start;
+        padding-right: 45px;
+    }
+}
+
+.tweet{
+    margin-top: 16px;
+    margin-bottom: 20px;
+
+    @media (--d){
+        width: 100%;
+    }
+}
+
+.profile{
+    min-width: 100%;
+    margin-top: auto;
+    margin-bottom: 10px;
 }

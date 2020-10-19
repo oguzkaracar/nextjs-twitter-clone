@@ -1,14 +1,27 @@
-import React from 'react'
-import cn from 'classnames';
+import React from "react";
+import cn from "classnames";
 
-import styles from './layout.module.css';
+// constant variables...
+import Const from "../constants/";
 
-const Layout = ({children}) => {
-    return (
-        <div className={cn([styles.layout])}>
-            {children}
-        </div>
-    )
-}
+import useWindowSize from "../hooks/useWindowSize";
 
-export default Layout
+import styles from "./layout.module.css";
+import Sidebar from "./Col-Sidebar";
+import Main from "./Col-Main";
+import Extra from "./Col-Extra";
+
+const Layout = ({ children}) => {
+	const { DESKTOP_SIZE, TABLET_SIZE } = Const;
+	const size = useWindowSize();
+
+	return (
+		<div className={cn([styles.layout])}>
+			<Sidebar flat={size.width < DESKTOP_SIZE}/>
+			<Main> {children}</Main>
+			{size.width > TABLET_SIZE && <Extra>extra</Extra>}
+		</div>
+	);
+};
+
+export default Layout;

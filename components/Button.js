@@ -1,13 +1,33 @@
 import React from "react";
-import cn from 'classnames'; // bununla hem buttonun base className' i hem de props'dan gelen classname'ni merge edicez.
+import cn from "classnames"; // bununla hem buttonun base className' i hem de props'dan gelen classname'ni merge edicez.
+import Link from "next/link";
 
 import styles from "./button.module.css";
 
-const Button = ({ full=false, children, className, ...props }) => {
+const LinkButton = ({ href, children, ...props }) => {
 	return (
-		<button type="button" className={cn(styles.button, full && styles.fullWidth, className)} {...props}>
+		<Link href={href}>
+			<a {...props}>{children}</a>
+		</Link>
+	);
+};
+
+const BaseButton = ({children, ...props }) => {
+	return (
+		<button type="button" {...props}>
 			{children}
 		</button>
+	);
+};
+
+const Button = ({ full = false, children, className, ...props }) => {
+
+	const Component = props.href ? LinkButton : BaseButton;
+
+	return (
+		<Component className={cn(styles.button, full && styles.fullWidth, className)} {...props}>
+			{children}
+		</Component>
 	);
 };
 
