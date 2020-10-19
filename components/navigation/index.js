@@ -2,10 +2,10 @@ import React from "react";
 import {useRouter} from 'next/router';
 import cn from 'classnames';
 
-import {MENU} from '../constants';
+import {MENU} from '../../constants';
 
-import NavigationButton from "./NavigationButton";
-import TextTitle from "./TextTitle";
+import NavigationButton from "./NavButton";
+import TextTitle from "../text/TextTitle";
 
 import styles from "./navigation.module.css";
 

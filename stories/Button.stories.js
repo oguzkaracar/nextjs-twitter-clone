@@ -1,14 +1,14 @@
 import React from "react";
 import { boolean } from "@storybook/addon-knobs";
 
-import Button from "../components/Button";
-import ThemeButton from "../components/ThemeButton";
-import NavigationButton from "../components/NavigationButton";
+import Button from "../components/button/";
+import ThemeButton from "../components/theme-button";
+import NavigationButton from "../components/navigation/NavButton";
 
-import Stack from "../components/Stack";
-import Navigation from "../components/Navigation";
+import Stack from "../components/stack/";
+import Navigation from "../components/navigation/";
 
-import TextTitle from "../components/TextTitle";
+import TextTitle from "../components/text/TextTitle";
 import { Home } from "../components/icons";
 
 export default {

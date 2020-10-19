@@ -1,9 +1,9 @@
 import React from "react";
 import cn from "classnames";
 
-import Navigation from "./Navigation";
-import ThemeButton from "./ThemeButton";
-import ProfileBox from "./ProfileBox";
+import Navigation from "../navigation/";
+import ThemeButton from "../theme-button";
+import ProfileBox from "../profile/";
 
 import styles from "./col-sidebar.module.css";
 

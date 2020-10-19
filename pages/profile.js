@@ -1,7 +1,6 @@
 import React from "react";
-import Layout from "../components/Layout";
 
-
+import Layout from "../components/layout/";
 
 const Profile = () => {
 	return <Layout>Profile Page</Layout>;

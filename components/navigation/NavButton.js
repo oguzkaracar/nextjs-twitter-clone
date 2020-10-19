@@ -1,7 +1,7 @@
 import React from "react";
 import cn from 'classnames';
 
-import Button from "./Button";
+import Button from "../button/";
 import styles from "./navigation-button.module.css";
 
 const NavigationButton = ({ href, notify, children, selected, className, ...props}) => {

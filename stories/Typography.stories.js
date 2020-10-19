@@ -1,6 +1,6 @@
 import React from "react";
 
-import TextTitle from "../components/TextTitle";
+import TextTitle from "../components/text/TextTitle";
 
 
 

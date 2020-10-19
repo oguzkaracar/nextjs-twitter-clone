@@ -3,10 +3,10 @@ import cn from "classnames";
 
 import styles from "./profile-box.module.css";
 
-import Photo from "./Photo";
-import Button from "./Button";
-import { ArrowBottom } from "./icons/";
-import TextBody from "./TextBody";
+import Photo from "../photo/";
+import Button from "../button/";
+import { ArrowBottom } from "../icons/";
+import TextBody from "../text/TextBody";
 
 const ProfileBox = ({ flat = false, slug = "ozzykara", name = "Oğuzhan" }) => {
 	return (

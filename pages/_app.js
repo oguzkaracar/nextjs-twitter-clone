@@ -8,6 +8,8 @@ export default function MyApp({ Component, pageProps }) {
 	useEffect(() => {
 		// useEffect aslında ssr de düzgün bir şekilde çalışmaz. useLayoutEffect'de nextjs' de uyarı veriyor.. alternatif çözümlere bakılabilir...
 
+		//TODO: sayfa yenilemede zıplama yapıyor!!! vercel'da 
+
 		const theme = localStorage.getItem("THEME") || "light";
 		setTheme(theme);
 
