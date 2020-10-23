@@ -6,10 +6,6 @@
 	padding: 12px 15px;
 	border-bottom: 1px solid var(--c-border-color);
     cursor: pointer;
-
-    &:hover{
-        background-color:rgba(27,46,55, 0.8);
-    }
 }
 
 .avatar {

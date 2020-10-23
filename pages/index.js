@@ -1,31 +1,21 @@
-import React from "react";
+import useSWR from "swr";
+import fetcher from "../lib/fetch";
 
 // components..
 import Layout from "../components/layout/";
 import Tweet from "../components/tweet";
+import Loading from "../components/loading";
 
 function HomePage() {
+	// next js useSWR hook kullanarak, rest api işlemi yaptık ve verimizi aldık...
+	const { data } = useSWR("/api/tweet", fetcher);
 	return (
 		<Layout>
-			<Tweet 
-				name='Oğuzhan' 
-				slug='OzzyTrouble' 
-				datetime={new Date("2020-08-03")}
-				text={`Kariyerimde yeni bir sayfa açmak üzereyim`}
-				>
-					
-			</Tweet>
-			<Tweet 
-				name='Oğuzhan' 
-				slug='OzzyTrouble' 
-				datetime={new Date("2020-10-20")}
-				text={`deneme tweet burada 
-				
-sen nerdesin....`}
-				>
-					
-			</Tweet>
-			
+			{!data && <Loading/>}
+
+			{data?.statuses.map((tweet) => (
+				<Tweet key={tweet.id} {...tweet} />
+			))}
 		</Layout>
 	);
 }

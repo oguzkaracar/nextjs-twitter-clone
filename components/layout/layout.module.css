@@ -8,7 +8,7 @@
 
 	@media (--t) {
 		max-width: 1060px;
-		grid-template-columns: auto 1fr 350px;
+		grid-template-columns: auto 1fr 375px;
 	}
 
 	@media (--d) {
