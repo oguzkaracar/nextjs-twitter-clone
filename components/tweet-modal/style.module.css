@@ -1,0 +1,80 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+    bottom: 0;
+    padding-top: 40px;
+	background-color: rgba(255, 255, 255, 0.2);
+	display: flex;
+	align-items: flex-start;
+    justify-content: center;
+    
+    :global(html.light) &{
+        background-color: rgba(0,0,0,0.3);
+    }
+}
+
+.modal {
+    outline: none;
+    border:none;
+	display: grid;
+    grid-template-areas: 
+    "header header"
+    "avatar body"
+    "... footer";
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 60px auto 50px;
+	grid-gap: 8px;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 600px;
+	border-bottom: 1px solid var(--c-border-color);
+	cursor: pointer;
+	background-color: var(--c-primary);
+	border-radius: 20px;
+}
+
+.header{
+    grid-area: header;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid var(--c-border-color);
+    color:var(--c-primary);
+}
+
+.avatar {
+	grid-area: avatar;
+}
+
+.body {
+    grid-area: body;
+    border-bottom: 1px solid var(--c-border-color);
+}
+
+.textarea {
+    display: block;
+    width: 100%;
+	resize: none;
+	background: transparent;
+    outline: 0;
+    font-size: 1.275rem;
+	color: var(--text-color);
+}
+
+.footer{
+    grid-area: footer;
+    margin-bottom: 10px;
+    justify-content: space-between;
+
+    .icons{
+        display: flex;
+    }
+
+    .tweetBtn{
+      padding: 0 15px; /* Gerekli olmayabilir...  */
+    }
+}
+
