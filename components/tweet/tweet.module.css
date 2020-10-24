@@ -5,7 +5,7 @@
 	grid-gap: 10px;
 	padding: 12px 15px;
 	border-bottom: 1px solid var(--c-border-color);
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .avatar {
@@ -29,29 +29,39 @@
 	white-space: pre-wrap; /*pre-wrap yazıları olduğu gibi alır..*/
 }
 
-.footer{
-    display: flex;
-    align-items: center;
+.footer {
+	display: flex;
+	align-items: center;
 }
 
-.footerButton{
-    flex:1;
-    display: flex;
-    align-items: center;
-    color: var(--c-gray);
+.footerButton {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	color: var(--c-gray);
 
-    span{
-        font-size: 0.9em;
-    }
+	span {
+		font-size: 0.9em;
+	}
 
-    &:first-child{
-        margin-left: -8px;
-    }
+	&:first-child {
+		margin-left: -8px;
+	}
 }
 
-.actionButton{
-   color:inherit;
-    svg{
-        font-size: 19px;
-    }
+.actionButton {
+	color: inherit;
+
+	svg {
+		font-size: 19px;
+	}
+}
+.retweet:hover {
+	background-color: rgba(23, 191, 99, 0.1);
+	color: rgb(23, 191, 99);
+}
+
+.like:hover {
+	background-color: rgba(224, 36, 94, 0.1);
+	color: rgb(224, 36, 94);
 }

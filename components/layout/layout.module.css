@@ -2,16 +2,17 @@
 	display: grid;
 	grid-template-columns: auto 1fr;
 	min-height: 100vh;
-	max-width: 670px;
+	max-width: 705px;
 	margin-left: auto;
 	margin-right:auto;
 
 	@media (--t) {
-		max-width: 1060px;
-		grid-template-columns: auto 1fr 375px;
+		max-width: 1095px;
+		grid-template-columns: 88px 1fr auto;
 	}
 
 	@media (--d) {
-		max-width: 1270px;
+		grid-template-columns: 275px 1fr 392px;
+		max-width: 1280px;
 	}
 }

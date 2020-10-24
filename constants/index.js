@@ -3,8 +3,8 @@ import React from "react";
 import * as Icon from "../components/icons";
 
 export default {
-	TABLET_SIZE: 980,
-	DESKTOP_SIZE: 1270,
+	TABLET_SIZE: 1005,
+	DESKTOP_SIZE: 1265,
 };
 
 export const MENU = [

@@ -4,6 +4,7 @@ import "../styles/app.css";
 
 export default function MyApp({ Component, pageProps }) {
 	const [theme, setTheme] = useState(null);
+	const [showModal, setShowModal] =useState(false);
 
 	useEffect(() => {
 		// useEffect aslında ssr de düzgün bir şekilde çalışmaz. useLayoutEffect'de nextjs' de uyarı veriyor.. alternatif çözümlere bakılabilir...
@@ -32,7 +33,7 @@ export default function MyApp({ Component, pageProps }) {
 	};
 
 	return (
-		<StoreContext.Provider value={{ theme, changeTheme }}>
+		<StoreContext.Provider value={{ theme, changeTheme, showModal, setShowModal }}>
 			<Component {...pageProps} />
 		</StoreContext.Provider>
 	);

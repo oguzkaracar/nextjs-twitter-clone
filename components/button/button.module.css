@@ -7,7 +7,7 @@
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	
+	outline: none;
 	transition: var(-fade);
 
 	&:hover {
@@ -22,4 +22,8 @@
 
 .iconButton{
 	padding: 8px;
+
+	svg{
+		font-size: 24px;
+	}
 }

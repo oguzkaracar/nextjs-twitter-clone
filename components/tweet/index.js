@@ -1,5 +1,6 @@
 import React from "react";
 import formatDistanceToNowStrict from "date-fns/formatDistanceToNowStrict";
+import cn from 'classnames';
 
 // TODO:: retweeted ve liked iconlarını al ve sayfada göster...
 
@@ -8,7 +9,7 @@ import Photo from "../photo";
 
 import styles from "./tweet.module.css";
 import IconButton from "../button/icon";
-import * as Icon from "../icons";
+import {Reply, Retweet, Like, Share }  from "../icons";
 
 const Tweet = ({ created_at, retweet_count, favorite_count, retweeted, favorited, text, user }) => {
 	return (
@@ -31,24 +32,24 @@ const Tweet = ({ created_at, retweet_count, favorite_count, retweeted, favorited
 					<div className={styles.footerButton}>
 						{/* Reply Button */}
 						<IconButton className={styles.actionButton}>
-							<Icon.Reply />
+							<Reply />
 						</IconButton>
 						<span></span>
 					</div>
 
 					{/* Retweet Button */}
 					<div className={styles.footerButton}>
-						<IconButton className={styles.actionButton}>
+						<IconButton className={cn(styles.actionButton, styles.retweet)}>
 							{/* {retweeted ? <Icon.RetweetFill /> : <Icon.Retweet />} */}
-							<Icon.Retweet/>
+							<Retweet />
 						</IconButton>
 						{retweet_count && <span> {retweet_count}</span>}
 					</div>
 
 					{/* Like Button */}
 					<div className={styles.footerButton}>
-						<IconButton className={styles.actionButton}>
-							{favorited ? <Icon.LikeFill /> : <Icon.Like />}
+						<IconButton className={cn(styles.actionButton, styles.like)}>
+						<Like />
 						</IconButton>
 						{favorite_count && <span> {favorite_count} </span>}
 					</div>
@@ -56,7 +57,7 @@ const Tweet = ({ created_at, retweet_count, favorite_count, retweeted, favorited
 					{/* Share Button */}
 					<div className={styles.footerButton}>
 						<IconButton className={styles.actionButton}>
-							<Icon.Share />
+							<Share />
 						</IconButton>
 					</div>
 				</footer>

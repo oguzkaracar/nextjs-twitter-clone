@@ -23,7 +23,7 @@ const Layout = ({ children}) => {
 		<div className={cn([styles.layout])}>
 			<Sidebar flat={size.width < DESKTOP_SIZE}/>
 			<Main> {children}</Main>
-			{size.width > TABLET_SIZE && <Extra>extra</Extra>}
+			{size.width > TABLET_SIZE && <Extra>Search</Extra>}
 		</div>
 	);
 };

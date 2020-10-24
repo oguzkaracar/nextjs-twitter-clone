@@ -3,9 +3,9 @@ import cn from 'classnames';
 
 import styles from './stack.module.css';
 
-const Stack = ({gap=10, column=false, children}) => {
+const Stack = ({gap=10, column=false, children, className}) => {
     return (
-        <div className={cn([styles.stack, column && styles.column])} style={{"--gap":`${gap}px`}}>
+        <div className={cn([styles.stack, column && styles.column, className])} style={{"--gap":`${gap}px`}}>
             {children}
         </div>
     )
