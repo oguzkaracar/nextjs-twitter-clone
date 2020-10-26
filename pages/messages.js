@@ -5,7 +5,7 @@ import Layout from "../components/layout/";
 
 
 const Messages = () => {
-	return <Layout>Messages Page</Layout>;
+	return <Layout messages></Layout>;
 };
 
 export default Messages;

@@ -5,7 +5,7 @@ import Layout from "../components/layout/";
 
 
 const Lists = () => {
-	return <Layout>Lists Page</Layout>;
+	return <Layout lists></Layout>;
 };
 
 export default Lists;
