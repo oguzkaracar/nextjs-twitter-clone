@@ -8,7 +8,7 @@ import Button from ".";
 const IconButton = ({ children, className, ...props }) => {
 
 	return (
-		<Button className={cn(styles.iconButton,className)} {...props}>
+		<Button className={cn(styles.iconButton, className)} {...props}>
 			{children}
 		</Button>
 	);

@@ -12,6 +12,8 @@ const Extra = ({ children }) => {
 					<p>Deneme</p>
 					<p> GS-FB</p>
 					<p>Selamlar</p>
+					<p>Dolar 8 TL</p>
+					<p>Bişeyler Olacak.....</p>
 				</div>
 			</div>
 		</div>

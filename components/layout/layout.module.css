@@ -1,18 +1,18 @@
 .layout {
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: 88px 1fr;
 	min-height: 100vh;
 	max-width: 705px;
 	margin-left: auto;
 	margin-right:auto;
-
+	
 	@media (--t) {
 		max-width: 1095px;
 		grid-template-columns: 88px 1fr auto;
 	}
 
 	@media (--d) {
-		grid-template-columns: 275px 1fr 392px;
+		grid-template-columns: 285px 1fr 392px;
 		max-width: 1280px;
 	}
 }

@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
-
 import StoreContext from "../../store";
 
 // components
@@ -77,7 +76,7 @@ const TweetModal = () => {
 						<textarea
 							className={styles.textarea}
 							name=""
-							rows="6"
+							rows="8"
 							placeholder="What's happening"
 							ref={ref}
 							value={tweet}

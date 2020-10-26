@@ -1,6 +1,7 @@
 .box {
 	padding: 10px;
     width: 100%;
+    text-align: left;
     &:hover{
         color:var(--c-text-color);
     }

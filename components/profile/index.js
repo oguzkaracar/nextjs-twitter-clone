@@ -8,7 +8,7 @@ import Button from "../button/";
 import { ArrowBottom } from "../icons/";
 import TextBody from "../text/TextBody";
 
-const ProfileBox = ({ flat = false, slug = "ozzykara", name = "Oğuzhan" }) => {
+const ProfileBox = ({ flat = false, slug = "oguzhankaracar", name = "Oğuzhan" }) => {
 	return (
 		<Button className={cn([styles.box])}>
 			<Photo size={39}/>

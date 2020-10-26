@@ -1,13 +1,11 @@
 .content {
 	max-width: 100%;
-	background: var(--c-dark-gray);
 	height: 100vh;
 	padding: 20px;
 }
 
 .trends {
 	width: 290px;
-	background-color: red;
 	padding: 10px;
 }
 

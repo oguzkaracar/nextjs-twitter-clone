@@ -71,6 +71,9 @@
 
     .icons{
         display: flex;
+        svg{
+            color: var(--c-theme);
+        }
     }
 
     .tweetBtn{

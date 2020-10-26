@@ -6,17 +6,16 @@
     height: 100vh;
     position: sticky;
     top:0;
+    overflow: auto;
 
     @media (--d){
         align-items: flex-start;
-        padding-right: 45px;
+        padding-right:30px;
     }
 }
 
 .tweet{
-    margin-top: 16px;
-    margin-bottom: 20px;
-
+   margin: 5px 0;
     @media (--d){
         width: 100%;
     }
