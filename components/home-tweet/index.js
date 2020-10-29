@@ -17,7 +17,7 @@ function HomeTweet() {
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify({ tweet }),
+				body: JSON.stringify({  }), // burası sonra devam edicek.
 			});
 			if (response.status !== 200) throw "Tweet can not be send.";
 			tweetSet("");
@@ -61,7 +61,7 @@ function HomeTweet() {
 						</IconButton>
 					</div>
 					<ThemeButton className={styles.submitButton} onClick={onSubmit}>
-						Tweet
+						Tweet(geçici olarak devre dışı)
 					</ThemeButton>
 				</div>
 			</div>

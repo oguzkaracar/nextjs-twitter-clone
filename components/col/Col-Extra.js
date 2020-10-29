@@ -9,11 +9,11 @@ const Extra = ({ children }) => {
 			{children}
 			<div className={styles.content}>
 				<div className={styles.trends}>
-					<p>Deneme</p>
+					<p>Tweet gönderme bilinçli olarak devre dışı bırakılmıştır...</p>
 					<p> GS-FB</p>
 					<p>Selamlar</p>
 					<p>Dolar 8 TL</p>
-					<p>Bişeyler Olacak.....</p>
+					<p>Tasarım daha sonra yapılacak</p>
 				</div>
 			</div>
 		</div>

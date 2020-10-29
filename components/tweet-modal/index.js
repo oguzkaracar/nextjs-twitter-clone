@@ -34,7 +34,7 @@ const TweetModal = () => {
 					headers: {
 						"Content-Type": "application/json",
 					},
-					body: JSON.stringify({ tweet }),
+					body: JSON.stringify({  }),
 				});
 
 				if (res.status !== 200) throw "Tweet gönderilemedi";
