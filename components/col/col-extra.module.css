@@ -1,16 +1,23 @@
-.content {
-	max-width: 100%;
-	height: 100vh;
-	padding: 20px;
+.extra {
+  padding: 10px 30px;
 }
 
-.trends {
-	width: 290px;
-	padding: 10px;
+.messages {
+  border-right: 1px solid var(--c-border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media screen and (min-width:1095px) {
-	.trends {
-		width: 350px;
-	}
+.messagesContainer {
+  & > div:first-child {
+    align-items: center !important;
+  }
+  span {
+    color: var(--c-gray);
+    margin-top: 7px;
+  }
+  button {
+    padding: 0 20px;
+  }
 }

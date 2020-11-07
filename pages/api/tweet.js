@@ -4,7 +4,7 @@ import Twit from "../../lib/twit";
 
 // tweetleri sitemize gömücez.
 export default (req, res) => {
-	Twit.get("search/tweets", { from: "oguzhankaracar", count:20}, function (err, data, response) {
+	Twit.get("search/tweets", { from: "oguzhankaracar"}, function (err, data, response) {
 		if (err) {
 			return res.status(400).json({message:'Bir hata oluştu!!!'});
 		}

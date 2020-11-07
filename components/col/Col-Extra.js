@@ -1,23 +1,21 @@
-import React from "react";
-import cn from "classnames";
+import cn from 'classnames';
 
-import styles from "./col-extra.module.css";
+import ProfileExtra from '../extra-col/profile';
+import MessagesExtra from '../extra-col/messages';
+import MainExtra from '../extra-col/main';
+import ExploreExtra from '../extra-col/explore';
 
-const Extra = ({ children }) => {
-	return (
-		<div className={cn([styles.extra])}>
-			{children}
-			<div className={styles.content}>
-				<div className={styles.trends}>
-					<p>Tweet gönderme bilinçli olarak devre dışı bırakılmıştır...</p>
-					<p> GS-FB</p>
-					<p>Selamlar</p>
-					<p>Dolar 8 TL</p>
-					<p>Tasarım daha sonra yapılacak</p>
-				</div>
-			</div>
-		</div>
-	);
-};
+import styles from './col-extra.module.css';
+
+function Extra({ explore, messages, profile }) {
+  return (
+    <div className={cn(styles.extra, messages && styles.messages)}>
+      {!messages && !explore && !profile && <MainExtra />}
+      {explore && <ExploreExtra />}
+      {messages && <MessagesExtra />}
+      {profile && <ProfileExtra />}
+    </div>
+  );
+}
 
 export default Extra;

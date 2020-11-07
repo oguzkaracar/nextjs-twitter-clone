@@ -32,7 +32,7 @@ const Layout = ({ children, explore, messages, profile, index, notification, boo
 				profile={profile}>
 				{children}
 			</Main>
-			{size.width > TABLET_SIZE && <Extra>Trends and Search</Extra>}
+			{size.width > TABLET_SIZE && <Extra explore={explore} messages={messages} profile={profile} >Trends and Search</Extra>}
 		</div>
 	);
 };

@@ -15,10 +15,10 @@ const ProfileMain = () => {
 
 				<div>
 					<TextTitle>Profile</TextTitle>
-					<span>11 Tweets</span>
+					<span>14 Tweets</span>
 				</div>
 			</Header>
-			profile-page-babaaaa
+			Profile Page @oguzhankaracar
 		</div>
 	);
 };
