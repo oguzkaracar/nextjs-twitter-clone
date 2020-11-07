@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
+import ExtraContainer from '../extra-container';
+import Trends from '../trends';
 
 const ExploreMain = () => {
-    return (
-        <div>
-            Explore Page...
-        </div>
-    )
-}
+  return (
+    <div>
+      <ExtraContainer explore>
+        <Trends />
+      </ExtraContainer>
+    </div>
+  );
+};
 
-export default ExploreMain
+export default ExploreMain;

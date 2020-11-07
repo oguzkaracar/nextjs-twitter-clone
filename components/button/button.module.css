@@ -1,29 +1,44 @@
 .button {
-	background: transparent;
-	cursor: pointer;
-	color: var(--c-text-color);
-	border-radius: 99px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-decoration: none;
-	outline: none;
-	transition: var(-fade);
+  background: transparent;
+  cursor: pointer;
+  color: var(--c-text-color);
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  outline: none;
+  transition: var(-fade);
 
-	&:hover {
-		background-color: var(--c-theme-10);
-		color: var(--c-theme);
-	}
+  &:hover {
+    background-color: var(--c-theme-10);
+    color: var(--c-theme);
+  }
 }
 
-.fullWidth{
-    width: 100% !important;
+.fullWidth {
+  width: 100% !important;
 }
 
-.iconButton{
-	padding: 8px;
+.iconButton {
+  padding: 8px;
 
-	svg{
-		font-size: 24px;
-	}
+  svg {
+    font-size: 24px;
+  }
+}
+
+.extraButton {
+  border-radius: 0;
+  &:hover {
+    background-color: var(--c-extra-button);
+  }
+}
+
+.forward {
+  transform: rotate(-90deg);
+  &:hover {
+    color: inherit;
+    background-color: inherit;
+  }
 }
