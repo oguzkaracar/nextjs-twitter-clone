@@ -1,37 +1,42 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
+import useSWR from 'swr';
+
+import style from './style.module.css';
 import TrendItem from './trendItem';
+import fetcher from '../../lib/fetch';
 
-function Trends() {
-  const [trends, setTrends] = useState([]);
+function Trends({explore}) {
+  // const [trends, setTrends] = useState([]);
 
-  // trendler api'den getirildi.
-  useEffect(() => {
-    const fetchTrends = async () => {
-      const res = await fetch('/api/trends');
-      const data = await res.json();
-      setTrends(data[0].trends);
-    };
+  // // trendler api'den getirildi.
+  // useEffect(() => {
+  //   const fetchTrends = async () => {
+  //     const res = await fetch('/api/trends');
+  //     const data = await res.json();
+  //     setTrends(data[0].trends);
+  //   };
 
-    fetchTrends();
-  }, []);
+  //   fetchTrends();
+  // }, []);
+
+  const { data } = useSWR('/api/trends', fetcher);
 
   return (
-    <div>
-      {trends &&
-        trends
+    <div className={explore && style.explore}>
+      {data &&
+        data?.[0].trends
           .slice(0, 5)
           .map(trend => (
             <TrendItem
               key={trend.name}
               url={trend.url}
-              category={`Trendin in Turkey`}
+              category={`Trending in Turkey`}
               hashtag={trend.name}
               number={trend.tweet_volume}
+              explore={explore}
             />
           ))}
     </div>
-
-    // <TrendItem category={category} hashtag={hashtag} number={number} url={url} />
   );
 }
 

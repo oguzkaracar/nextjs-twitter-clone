@@ -9,7 +9,7 @@ import IconButton from '../button/icon';
 
 // butonlar arasında validateDOMNesting hatası veriyor.ona bak....
 
-function TrendItem({ category, hashtag, number, url }) {
+function TrendItem({ category, hashtag, number, url, explore }) {
   return (
     <ExtraButton url={url} className={style.button}>
       <div className={style.textContainer}>
@@ -29,9 +29,13 @@ function TrendItem({ category, hashtag, number, url }) {
           )}
         </SmallText>
       </div>
-      <IconButton className={style.icon}>
-        <ArrowBottom />
-      </IconButton>
+      {!explore ? (
+        <IconButton className={style.icon}>
+          <ArrowBottom />
+        </IconButton>
+      ) : (
+        <img src="https://pbs.twimg.com/profile_images/1308010958862905345/-SGZioPb_400x400.jpg" alt="image"  className={style.exploreImg}/>
+      )}
     </ExtraButton>
   );
 }
