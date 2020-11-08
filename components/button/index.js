@@ -22,6 +22,7 @@ const BaseButton = ({children, ...props }) => {
 
 const Button = ({ full = false, children, className, ...props }) => {
 
+	// gelen proplarda href var ise Link button olarak döndür... değilse normal button olarak döndür.
 	const Component = props.href ? LinkButton : BaseButton;
 
 	return (

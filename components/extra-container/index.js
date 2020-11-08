@@ -1,12 +1,11 @@
+import cn from 'classnames';
 
-import cn from 'classnames'
+import styles from './style.module.css';
 
-import styles from './style.module.css'
-
-import { Options } from '../icons'
-import IconButton from '../button/icon'
-import TitleBold from '../text/TextTitle'
-import ExtraButton from '../button/extra'
+import { Options } from '../icons';
+import IconButton from '../button/icon';
+import TitleBold from '../text/TextTitle';
+import ExtraButton from '../button/extra';
 
 function ExtraContainer({ title, options, children, explore = false }) {
   return (
@@ -26,7 +25,7 @@ function ExtraContainer({ title, options, children, explore = false }) {
         </ExtraButton>
       </div>
     </section>
-  )
+  );
 }
 
-export default ExtraContainer
+export default ExtraContainer;

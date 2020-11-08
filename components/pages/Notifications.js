@@ -1,24 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import IconButton from "../button/icon";
-import Header from "../header";
-import TextTitle from "../text/TextTitle";
-import {Options} from '../icons'
+import NotificationTitle from '../titles/notifications';
+import NotificationItem from '../notification-item';
 
 const NotificationsMain = () => {
-	return (
-	<div>
-		<Header>
-			<TextTitle>Notifications</TextTitle>
-			<IconButton>
-				<Options/>
-			</IconButton>
-		</Header>
-        <div>
-			deneme-notifications
-		</div>
+  return (
+    <div>
+      <NotificationTitle />
+      <NotificationItem name="Twitter User" tweet="test-Tweet" />
+      <NotificationItem name="Twitter User" tweet="test-Tweet" />
+      <NotificationItem name="Twitter User" tweet="test-Tweet" />
+      <NotificationItem name="Twitter User" tweet="test-Tweet" />
+      <NotificationItem name="Twitter User" tweet="test-Tweet" />
+      <NotificationItem name="Twitter User" tweet="test-Tweet" />
     </div>
-	);
+  );
 };
 
 export default NotificationsMain;
