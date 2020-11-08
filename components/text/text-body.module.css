@@ -1,4 +1,6 @@
-
-.bold{
-     font-weight: bold;
+.body {
+  color: var(--c-text-color);s
+}
+.bold {
+  font-weight: bold;
 }

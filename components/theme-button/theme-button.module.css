@@ -11,6 +11,7 @@
 	&:hover {
 		background: var(--c-theme);
 		color: #fff;
+		opacity: 0.9;
 	}
 }
 
