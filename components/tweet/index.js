@@ -2,14 +2,14 @@ import React from "react";
 import formatDistanceToNowStrict from "date-fns/formatDistanceToNowStrict";
 import cn from 'classnames';
 
-// TODO:: retweeted ve liked iconlarını al ve sayfada göster...
+// *** TODO:: retweeted ve liked iconlarını al ve sayfada göster...
 
 // components...
 import Photo from "../photo";
 
 import styles from "./tweet.module.css";
 import IconButton from "../button/icon";
-import {Reply, Retweet, Like, Share }  from "../icons";
+import {Reply, Retweet, RetweetFill, Like, Share, LikeFill }  from "../icons";
 
 const Tweet = ({ created_at, retweet_count, favorite_count, retweeted, favorited, text, user }) => {
 	return (
@@ -40,8 +40,7 @@ const Tweet = ({ created_at, retweet_count, favorite_count, retweeted, favorited
 					{/* Retweet Button */}
 					<div className={styles.footerButton}>
 						<IconButton className={cn(styles.actionButton, styles.retweet)}>
-							{/* {retweeted ? <Icon.RetweetFill /> : <Icon.Retweet />} */}
-							<Retweet />
+							{retweeted ? <RetweetFill /> : <Retweet />}
 						</IconButton>
 						{retweet_count && <span> {retweet_count}</span>}
 					</div>
@@ -49,7 +48,7 @@ const Tweet = ({ created_at, retweet_count, favorite_count, retweeted, favorited
 					{/* Like Button */}
 					<div className={styles.footerButton}>
 						<IconButton className={cn(styles.actionButton, styles.like)}>
-						<Like />
+						{favorited ? <LikeFill/> : <Like/>}
 						</IconButton>
 						{favorite_count && <span> {favorite_count} </span>}
 					</div>

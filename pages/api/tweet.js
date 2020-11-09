@@ -2,7 +2,7 @@ import Twit from "../../lib/twit";
 
 // Nextjs' de api klasöründeki dosyalar client tarafında gözükmüyor. Bir nevi node uygulaması gibi çalışıyor. API endpointleri gibi kullanabiliyoruz...
 
-// tweetleri sitemize gömücez.
+// tweetlerimi profile page'de göstericem...
 export default (req, res) => {
 	Twit.get("search/tweets", { from: "oguzhankaracar"}, function (err, data, response) {
 		if (err) {

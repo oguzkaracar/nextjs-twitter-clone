@@ -11,7 +11,7 @@ import TextBody from "../text/TextBody";
 const ProfileBox = ({ flat = false, slug = "oguzhankaracar", name = "Oğuzhan" }) => {
 	return (
 		<Button className={cn([styles.box])}>
-			<Photo size={39}/>
+			<Photo size={39} src="https://pbs.twimg.com/profile_images/1318988169853927424/AuUMLPas_400x400.jpg"/>
 			{ !flat && 
 				<>
 					<div className={styles.body}>
