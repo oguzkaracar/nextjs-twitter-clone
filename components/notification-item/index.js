@@ -18,7 +18,7 @@ function NotificationItem({ tweet, name }) {
         </IconButton>
         <div className={style.personContainer}>
           <Stack column gap={5}>
-            <Photo size={36} />
+            <Photo size={36} src="https://pbs.twimg.com/profile_images/1318988169853927424/AuUMLPas_400x400.jpg" />
             <TitleBody>
               <TitleBody bold>{name}</TitleBody>liked your Tweet
             </TitleBody>
