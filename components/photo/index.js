@@ -11,34 +11,34 @@ const Photo = ({
   size = 47,
   header = false,
   profile = false,
+  home_timeline = false,
   src,
   secondSrc,
 }) => {
   const { data } = useSWR('/api/tweet', fetcher);
-
   return (
     <div
       className={cn([styles.photo], header && styles.header)}
       style={{ width: size, height: size }}>
-        {/* Profile sayfasında banner fotoyu şimdilik, statik olarak aldım. */}
       {header ? (
         <img
           className={cn(styles.img, header && styles.header)}
-          src="https://pbs.twimg.com/profile_banners/860587802622398464/1604713321/600x200"
+          src={secondSrc}
           alt={alt}
         />
       ) : (
         <img
           className={cn(styles.img, header && styles.header)}
-          // src={data?.statuses[0].user.profile_image_url_https}
-          src={src}
+          src={
+            home_timeline ? src : data && data[0].user.profile_image_url_https
+          }
           alt={alt}
         />
       )}
       {profile && ( // profil sayfasındaki Photo' component propsları
         <img
           className={cn(styles.img, styles.profile)}
-          src={data?.statuses[0].user.profile_image_url_https}
+          src={data && data[0].user.profile_image_url_https}
           alt={alt}
           style={{ width: size, height: size }}
         />

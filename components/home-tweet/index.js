@@ -29,7 +29,7 @@ function HomeTweet() {
 	return (
 		<div className={styles.modal}>
 			<div className={styles.avatar}>
-				<Photo src="https://pbs.twimg.com/profile_images/1318988169853927424/AuUMLPas_400x400.jpg"/>
+				<Photo />
 			</div>
 			<div className={styles.body}>
 				<textarea

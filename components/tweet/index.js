@@ -11,12 +11,12 @@ import styles from "./tweet.module.css";
 import IconButton from "../button/icon";
 import {Reply, Retweet, RetweetFill, Like, Share, LikeFill }  from "../icons";
 
-const Tweet = ({ created_at, retweet_count, favorite_count, retweeted, favorited, text, user }) => {
+const Tweet = ({ created_at, retweet_count, favorite_count, retweeted, favorited, text, user}) => {
 	return (
 		<article className={styles.tweet}>
 			{/* head - avatar */}
 			<div className={styles.avatar}>
-				<Photo src={user.profile_image_url_https} />
+				<Photo src={user.profile_image_url_https} home_timeline />
 			</div>
 
 			{/* body */}
