@@ -18,7 +18,17 @@
 
 .infoContainer {
   padding-left: 15px;
+
+  /* .profileInfo{
+    width: 70%;
+    display: flex;
+    justify-content:space-around;
+  } */
 }
+
+
+
+
 
 .buttonContainer {
   margin-top: 10px;
