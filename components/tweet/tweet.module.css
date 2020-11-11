@@ -1,67 +1,102 @@
 .tweet {
-	display: grid;
-	grid-template-areas: "avatar body";
-	grid-template-columns: 50px 1fr;
-	grid-gap: 10px;
-	padding: 12px 15px;
-	border-bottom: 1px solid var(--c-border-color);
-	cursor: pointer;
+  display: grid;
+  grid-template-areas: 'avatar body';
+  grid-template-columns: 50px 1fr;
+  grid-gap: 10px;
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--c-border-color);
+  cursor: pointer;
 }
 
 .avatar {
-	grid-area: avatar;
+  grid-area: avatar;
 }
 
 .body {
-	grid-area: body;
+  grid-area: body;
 }
 
 .header {
-	color: var(--c-gray);
+  color: var(--c-gray);
 
-	.name {
-		color: var(--c-text-color);
-		font-weight: bold;
-	}
+  .name {
+    color: var(--c-text-color);
+    font-weight: bold;
+  }
 }
 .content {
-	margin: 5px 0;
-	white-space: pre-wrap; /*pre-wrap yazıları olduğu gibi alır..*/
+  margin: 5px 0;
+  white-space: pre-wrap; /*pre-wrap yazıları olduğu gibi alır..*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  /* .tweetText{
+		
+	} */
+
+  .tweetMedia {
+    margin-top: 10px;
+    max-width: 510px;
+    max-height: 297px;
+    overflow: hidden;
+    border: 1px solid var(--c-border-color);
+    border-radius: 20px;
+
+    img {
+      width: 100%;
+      max-height: 297px;
+    }
+  }
+
+  .tweetUrls {
+    margin-top: 10px;
+    max-width: 510px;
+    height: 135px;
+    border: 1px solid var(--c-border-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a {
+      color: var(--c-gray-color);
+    }
+  }
 }
 
 .footer {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .footerButton {
-	flex: 1;
-	display: flex;
-	align-items: center;
-	color: var(--c-gray);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  color: var(--c-gray);
 
-	span {
-		font-size: 0.9em;
-	}
+  span {
+    font-size: 0.9em;
+  }
 
-	&:first-child {
-		margin-left: -8px;
-	}
+  &:first-child {
+    margin-left: -8px;
+  }
 }
 
 .actionButton {
-	color: inherit;
+  color: inherit;
 
-	svg {
-		font-size: 19px;
-	}
+  svg {
+    font-size: 19px;
+  }
 }
 .retweet:hover {
-	background-color: rgba(23, 191, 99, 0.1);
-	color: rgb(23, 191, 99);
+  background-color: rgba(23, 191, 99, 0.1);
+  color: rgb(23, 191, 99);
 }
 
 .like:hover {
-	background-color: rgba(224, 36, 94, 0.1);
-	color: rgb(224, 36, 94);
+  background-color: rgba(224, 36, 94, 0.1);
+  color: rgb(224, 36, 94);
 }
