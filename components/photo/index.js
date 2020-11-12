@@ -20,7 +20,7 @@ const Photo = ({
     <div
       className={cn([styles.photo], header && styles.header)}
       style={{ width: size, height: size }}>
-      {header ? (
+      {header ? ( // profile banner fotoğrafı..
         <img
           className={cn(styles.img, header && styles.header)}
           src={secondSrc}
@@ -28,7 +28,7 @@ const Photo = ({
         />
       ) : (
         <img
-          className={cn(styles.img, header && styles.header)}
+          className={cn(styles.img)}
           src={
             home_timeline ? src : data && data[0].user.profile_image_url_https
           }

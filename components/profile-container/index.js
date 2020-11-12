@@ -25,7 +25,12 @@ function ProfileContainer() {
       {data && (
         <>
           <div className={style.photo}>
-            <Photo profile header secondSrc={userData.profile_banner_url} size={140} />
+            <Photo
+              header
+              profile
+              secondSrc={userData.profile_banner_url}
+              size={140}
+            />
           </div>
           <div className={style.button}>
             <Button>Edit profile</Button>

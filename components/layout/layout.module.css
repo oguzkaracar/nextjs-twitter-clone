@@ -1,6 +1,6 @@
 .layout {
   display: grid;
-  grid-template-columns: 88px minmax(600px, auto) 1fr;
+  grid-template-columns: 88px 600px;
   min-height: 100vh;
   max-width: 705px;
   margin-left: auto;
@@ -8,11 +8,11 @@
 
   @media (--t) {
     max-width: 1060px;
-    grid-template-columns: auto 1fr 400px;
+    grid-template-columns: minmax(70px, auto) 600px auto;
   }
 
   @media (--d) {
-    grid-template-columns: 285px 1fr 392px;
+    grid-template-columns: 285px minmax(600px, 1fr) 392px;
     max-width: 1270px;
   }
 }

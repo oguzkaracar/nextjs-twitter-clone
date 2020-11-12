@@ -13,7 +13,7 @@ const ProfileMain = () => {
   const { data } = useSWR('api/tweet', fetcher);
 
   return (
-    <div>
+    <>
       {data && (
         <>
           <Header back>
@@ -28,7 +28,7 @@ const ProfileMain = () => {
           <ProfileContainer />
         </>
       )}
-    </div>
+    </>
   );
 };
 
