@@ -8,4 +8,4 @@ Live Demo: [Twitter Clone](https://nextjs-twitter-oz.vercel.app/)
 
 ## ToDo 
 
-- [] Mobil stillendirme eklenecek.
+- [ ] Mobil stillendirme eklenecek.
